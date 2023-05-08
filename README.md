@@ -75,3 +75,20 @@ These results indicate that the Q-learning algorithm successfully learned an eff
 However, there were fluctuations in the minimum and maximum scores. The fluctuations in the scores during the training process can be partially explained by the exploration-exploitation trade-off, initial Q-table initialization, and learning rate. The epsilon-greedy strategy employed in our approach allows the agent to explore the action space by taking random actions with a probability of epsilon, which decays over time. During the exploration phase, the agent may take suboptimal actions, leading to lower scores. Furthermore, the initial Q-table is populated with random values, which may cause the agent to make poor decisions in the early stages of training. As the learning progresses, the Q-table converges to more accurate estimates of state-action values, but occasional fluctuations may still occur. The learning rate also plays a crucial role in the stability of the learning process. A high learning rate may cause the agent to overfit to recent experiences, leading to instability in performance, while a low learning rate might slow down the learning process, causing the agent to take longer to find the optimal policy. Balancing these factors is essential for achieving stable and optimal learning outcomes in reinforcement learning tasks such as the cart-pole problem. 
 
 Although there were fluctuations in the minimum and maximum scores,  the overall trend indicates a successful implementation of Q-learning in solving the cart-pole problem.
+
+
+### Reference
+- Wikipedia contributors. (2023). Q-learning. _Wikipedia_. [https://en.wikipedia.org/wiki/Q-learning](https://en.wikipedia.org/wiki/Q-learning)
+- Paul, S. (2023). An introduction to Q-Learning: Reinforcement Learning. _FloydHub Blog_. [https://blog.floydhub.com/an-introduction-to-q-learning-reinforcement-learning/](https://blog.floydhub.com/an-introduction-to-q-learning-reinforcement-learning/)
+- Awan, A. A. (2022). An Introduction to Q-Learning: A Tutorial For Beginners. [https://www.datacamp.com/tutorial/introduction-q-learning-beginner-tutorial](https://www.datacamp.com/tutorial/introduction-q-learning-beginner-tutorial)
+- Shyalika, C. (2021, December 12). A Beginners Guide to Q-Learning - Towards Data Science. _Medium_. [https://towardsdatascience.com/a-beginners-guide-to-q-learning-c3e2a30a653c](https://towardsdatascience.com/a-beginners-guide-to-q-learning-c3e2a30a653c)
+
+
+
+
+
+
+
+
+
+
