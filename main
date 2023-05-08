@@ -1,35 +1,24 @@
 # importing==================================================================================
-
 import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
-
 # ================================================================================================
-
-
 env = gym.make('CartPole-v1', render_mode="rgb_array")
 # if change the render_mode to "human", it will constantly display the proccess of reinforcement training
 # But it will largely slow down the proccess of training since it will display every time it run
 # rgb_array will only return data instead of showing the proccess
 
-
-
 BIN_SIZE = 20 # size you want the q-table to be 
 EPISODES = 40000  # number of times to train
 
-
-
-
 LEARNING_RATE = 0.1
 DISCOUNT = 0.95
-
 
 # epsilon decay settings ===============================================================================================================
 epsilon = 1 
 START_EPSILON_DECAYING = 1
 END_EPSILON_DECAYING = EPISODES // 2
 epsilon_decay_value = epsilon / (END_EPSILON_DECAYING - START_EPSILON_DECAYING)
-
 
 # create ============================================================================================================================
 observation_space_size = len(env.observation_space.high)
@@ -55,8 +44,6 @@ def get_discrete_state(state):
     
 previous_count = []  # array of all scores over runs
 metrics = {'ep': [], 'avg': [], 'min': [], 'max': []} 
-
-
 
 # training===============================================================================================================================
 for episode in range(EPISODES+1):
@@ -111,6 +98,9 @@ for episode in range(EPISODES+1):
 
 
 env.close()
+
+
+
 
 # Show the training result by render in 'human' mode========================================================================================================================================
 
