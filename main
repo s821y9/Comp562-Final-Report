@@ -1,8 +1,8 @@
-# importing==================================================================================
+# importing==================================================================================================================================
 import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
-# ================================================================================================
+# ==========================================================================================================================================
 env = gym.make('CartPole-v1', render_mode="rgb_array")
 # if change the render_mode to "human", it will constantly display the proccess of reinforcement training
 # But it will largely slow down the proccess of training since it will display every time it run
@@ -31,7 +31,7 @@ bins = [
 
 q_table = np.random.uniform(low=-2, high=0, size=([BIN_SIZE] * observation_space_size + [env.action_space.n]))
 
-# function============================================================================================================================
+# function========================================================================================================================================
 
 # Given a state of the enviroment, return its descreteState index in qTable
 def get_discrete_state(state):
@@ -40,12 +40,12 @@ def get_discrete_state(state):
         state_index.append(np.digitize(state[i], bins[i]) - 1)
     return tuple(state_index)
     
-# ===================================================================================================================================    
+# ===============================================================================================================================================    
     
 previous_count = []  # array of all scores over runs
 metrics = {'ep': [], 'avg': [], 'min': [], 'max': []} 
 
-# training===============================================================================================================================
+# training===========================================================================================================================================
 for episode in range(EPISODES+1):
 
     state, _ = env.reset()
@@ -102,7 +102,7 @@ env.close()
 
 
 
-# Show the training result by render in 'human' mode========================================================================================================================================
+# Show the training result by render in 'human' mode=====================================================================================================
 
 env = gym.make('CartPole-v1', render_mode="human")
 state,_ = env.reset()
