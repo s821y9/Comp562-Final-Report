@@ -54,7 +54,9 @@ After the training is completed, we visualize the agent's performance in the car
 
 ### Results and conclusion
 
-The results of our project demonstrate the effectiveness of the Q-learning algorithm in learning to balance the cart-pole. As the training progressed, we observed significant improvements in the agent's performance, particularly in average scores. The output shows the performance metrics at different episodes during the training:
+The results of our project demonstrate the effectiveness of the Q-learning algorithm in learning to balance the cart-pole. As the training progressed, we observed significant improvements in the agent's performance, particularly in average scores. The figures below show the performance metrics at different episodes during the training:
+
+![Performance metrics](image1.png)
 
 Episode 0: As the starting point, the agent had an average score of 41, with a minimum and maximum score of 41.
 Episode 5,000: The agent's average score increased to 29.79, with a minimum score of 8 and a maximum score of 173.
@@ -69,3 +71,5 @@ Episode 40,000: In the final evaluation, the agent achieved an average score of 
 These results indicate that the Q-learning algorithm successfully learned an effective policy for the cart-pole problem. As training progressed, the agent's average score increased, suggesting that it was learning to balance the pole more effectively over time. 
  
 However, there were fluctuations in the minimum and maximum scores. The fluctuations in the scores during the training process can be partially explained by the exploration-exploitation trade-off, initial Q-table initialization, and learning rate. The epsilon-greedy strategy employed in our approach allows the agent to explore the action space by taking random actions with a probability of epsilon, which decays over time. During the exploration phase, the agent may take suboptimal actions, leading to lower scores. Furthermore, the initial Q-table is populated with random values, which may cause the agent to make poor decisions in the early stages of training. As the learning progresses, the Q-table converges to more accurate estimates of state-action values, but occasional fluctuations may still occur. The learning rate also plays a crucial role in the stability of the learning process. A high learning rate may cause the agent to overfit to recent experiences, leading to instability in performance, while a low learning rate might slow down the learning process, causing the agent to take longer to find the optimal policy. Balancing these factors is essential for achieving stable and optimal learning outcomes in reinforcement learning tasks such as the cart-pole problem. 
+
+Although there were fluctuations in the minimum and maximum scores,  the overall trend indicates a successful implementation of Q-learning in solving the cart-pole problem.
