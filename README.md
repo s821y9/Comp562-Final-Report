@@ -58,6 +58,8 @@ The results of our project demonstrate the effectiveness of the Q-learning algor
 
 ![Performance metrics](image1.png)
 
+![Performance metrics](image2.png)
+
 Episode 0: As the starting point, the agent had an average score of 41, with a minimum and maximum score of 41.
 Episode 5,000: The agent's average score increased to 29.79, with a minimum score of 8 and a maximum score of 173.
 Episode 10,000: At this stage, the agent achieved an average score of 65.564, with a minimum score of 8 and a maximum score of 359.
